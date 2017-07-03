@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.PORT || 3000;
 
 hbs.registerPartials(__dirname + '/views/partials');
 var app = express();
@@ -53,12 +54,12 @@ app.get('/about', (req,res) => {
         currentyear: new Date().getFullYear()
     });
     // res.send('About Page!!!');
-})
+});
 
 app.get('/bad', (req,res) => {
     res.send('404 page not found');
-})
+});
 
-app.listen(3000, ()=>{
-    console.log('server is up on 3000');
+app.listen(port, ()=>{
+    console.log(`server is up on ${port}`);
 });
