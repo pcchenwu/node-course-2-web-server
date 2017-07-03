@@ -42,8 +42,8 @@ app.get('/', (req, res) => {
     // })
     res.render('home.hbs',{
         windowtitle: 'Home Page',
-        pagetitle: 'Home Page',
-        pagemsg: 'Welcom to my website',
+        pagetitle: 'Hello giagiar!!!',
+        pagemsg: 'Welcom to DoDo website',
         currentyear: new Date().getFullYear()
     })
 });
